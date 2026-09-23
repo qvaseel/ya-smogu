@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pyaterka.tomsk.ru/sitemap.xml
+Host: pyaterka.tomsk.ru
