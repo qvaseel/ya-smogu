@@ -111,9 +111,21 @@
                 Посмотреть занятия
               </a>
             </div>
-            <div class="hero-note">
-              <span> 📍 </span>
-              ул. Говорова, 76/1
+            <div class="hero-note" aria-label="Контактная информация центра">
+              <div class="hero-note-item">
+                <span aria-hidden="true">📍</span>
+                <span>ул. Говорова, 76/1</span>
+              </div>
+              <a class="hero-note-item" href="tel:+7382255580">
+                <span aria-hidden="true">☎</span>
+                <span>25-55-80</span>
+              </a>
+              <div class="hero-note-item hero-note-hours">
+                <span aria-hidden="true">🕒</span>
+                <span
+                  ><b>Будни:</b> 8:00–20:00 · <b>Выходные:</b> 11:00–18:00</span
+                >
+              </div>
             </div>
           </div>
           <div class="hero-visual reveal">
@@ -144,22 +156,22 @@
           <div>
             <span> ♥ </span>
             <b> Забота </b>
-            <small> Присмотр и безопасный досуг </small>
+            <small> присмотр и безопасный досуг </small>
           </div>
           <div>
             <span> ★ </span>
             <b> Учёба </b>
-            <small> Уроки, подготовка, репетиторство </small>
+            <small> уроки, подготовка, репетиторство </small>
           </div>
           <div>
             <span> ● </span>
             <b> Развитие </b>
-            <small> Речь, чтение, английский, шахматы </small>
+            <small> речь, чтение, английский, шахматы </small>
           </div>
           <div>
             <span> ✦ </span>
             <b> Творчество </b>
-            <small> Рисование, макраме, мастер-классы </small>
+            <small> рисование, макраме, мастер-классы </small>
           </div>
         </div>
       </section>
@@ -597,6 +609,13 @@
                   <a href="tel:+7382255580"> 25-55-80 </a>
                 </p>
                 <p>
+                  <b> Режим работы </b>
+                  <br />
+                  Будни: 8:00–20:00
+                  <br />
+                  Выходные: 11:00–18:00
+                </p>
+                <p>
                   <b> E-mail </b>
                   <br />
                   <a href="mailto:YaSmogu0501@gmail.com">
@@ -642,16 +661,21 @@
               <p class="form-intro">
                 Оставьте имя, телефон и коротко напишите, что вас интересует.
               </p>
+              <div
+                class="form-status form-status-error"
+                id="form-error"
+                hidden
+                role="alert"
+              >
+                Не удалось отправить заявку. Позвоните нам или напишите в
+                Telegram — либо попробуйте ещё раз чуть позже.
+              </div>
               <form
-                action="/thanks.html"
+                action="/contact.php"
                 class="feedback-form"
-                data-netlify="true"
                 id="feedback-form"
                 method="POST"
-                name="contact"
-                netlify
               >
-                <input name="form-name" type="hidden" value="contact" />
                 <p aria-hidden="true" class="visually-hidden">
                   <label>
                     Не заполняйте это поле:
@@ -800,6 +824,26 @@
               "addressRegion": "Томская область",
               "addressCountry": "RU"
             },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "11:00",
+                "closes": "18:00"
+              }
+            ],
             "areaServed": {
               "@type": "City",
               "name": "Томск"
